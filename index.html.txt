@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Palak Ke Liye 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
+      font-family: 'Indie Flower', cursive;
+      overflow-x: hidden;
+    }
+
+    .intro {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .intro h1 {
+      font-size: 3em;
+      color: #ff1493;
+    }
+
+    .intro p {
+      font-size: 1.5em;
+      color: #ff69b4;
+      margin-top: 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .gift-box {
+      width: 120px;
+      height: 120px;
+      background: #ff69b4;
+      position: relative;
+      margin: 20px auto;
+      cursor: pointer;
+      border-radius: 10px;
+      animation: bounce 2s infinite;
+    }
+
+    .gift-box::before {
+      content: "";
+      width: 100%;
+      height: 20px;
+      background: #ffd700;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    .gift-lid {
+      width: 120px;
+      height: 30px;
+      background: #ff69b4;
+      position: absolute;
+      top: -30px;
+      left: 0;
+      border-radius: 10px 10px 0 0;
+      transition: all 0.5s ease;
+    }
+
+    .gift-open .gift-lid {
+      transform: rotate(-25deg);
+      top: -60px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .message {
+      display: none;
+      text-align: center;
+      font-size: 1.4em;
+      color: #444;
+      margin-top: 20px;
+    }
+
+    .gift-open + .message {
+      display: block;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5em;
+      color: #ff1493;
+    }
+
+    .section p {
+      font-size: 1.3em;
+      color: #444;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: #999;
+    }
+
+    iframe {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/fnHl1lODbYQ?autoplay=1&loop=1&playlist=fnHl1lODbYQ" frameborder="0" allow="autoplay"></iframe>
+
+  <!-- Intro -->
+  <div class="intro">
+    <h1>Hi Palak 💖</h1>
+    <p>Yeh sab sirf tere liye banaya hai...</p>
+
+    <!-- Gift Animation -->
+    <div class="gift-box" onclick="openGift(this)">
+      <div class="gift-lid"></div>
+    </div>
+    <div class="message">🎁 Surprise! Tu meri sabse pyaari dost hai 💝</div>
+  </div>
+
+  <!-- Section: Dosti -->
+  <div class="section">
+    <h2>Teri Dosti, Mera Fakr 💫</h2>
+    <p>
+      Tere jaisa dost milna kismat ki baat hoti hai. Tu sirf dost nahi, meri har muskaan ka reason hai.
+      Tu ho to har din achha lagta hai. Tu ho to main hoon. ❤️
+    </p>
+  </div>
+
+  <!-- Section: Motivation -->
+  <div class="section">
+    <h2>Tu Kamzor Nahi Hai 💪</h2>
+    <p>
+      Palak, tu jitni strong hai na, utna log bas soch sakte hain.<br>
+      Har problem se ladne ka junoon hai tere andar. Kabhi doubt mat kar apne aap pe.<br><br>
+      **Tu unique hai, beautiful hai, powerful hai.**  
+      Kisi aur ke comparison mein mat chal — tu sirf apni kahani likhne ke liye bani hai. 💫
+    </p>
+  </div>
+
+  <!-- Section: Pyar Bhari Baat -->
+  <div class="section">
+    <h2>Ek Choti Si Baat...</h2>
+    <p>
+      Agar zindagi ek kahani hoti, tu meri favourite line hoti. 💌<br>
+      Palak, tu meri zindagi ka sabse haseen tohfa hai.
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Made with ❤️ by Someone Who Truly Cares
+  </div>
+
+  <script>
+    function openGift(box) {
+      box.classList.add('gift-open');
+    }
+  </script>
+
+</body>
+</html>
